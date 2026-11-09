@@ -4,8 +4,8 @@ title: "TWC — Total Wireless Control"
 type: software
 authors:
   - name: "Benyvan (@benyvan)"
-date-released: 2026-11-08
-version: "1.0.0"
+date-released: 2026-11-09
+version: "1.1.0"
 license: GPL-3.0-or-later
 abstract: >-
   Aplicativo gráfico para controle de interfaces Wi-Fi locais em Linux baseado

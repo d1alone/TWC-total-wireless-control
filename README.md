@@ -14,6 +14,8 @@ Linux baseadas em Debian, como Linux Mint e Kali Linux.
 ## Recursos
 
 - Detecta interfaces wireless disponíveis e permite atualizar a lista.
+- Exibe no log um diagnóstico resumido da interface selecionada, com
+  capacidades e limitações wireless, barramento, driver e identificação USB.
 - Sobe e desce uma interface.
 - Alterna entre os modos `monitor` e `managed`.
 - Mostra o estado da interface com um teste de leitura usando `iw`.
@@ -21,6 +23,10 @@ Linux baseadas em Debian, como Linux Mint e Kali Linux.
   kill`).
 - Pode parar ou reiniciar o NetworkManager, sempre pedindo confirmação.
 - Exibe comandos e resultados em um log que pode ser selecionado e copiado.
+- O botão **Info** limpa o log antes do diagnóstico e mantém o início do
+  resultado visível. SSID, endereços MAC e números de série USB são omitidos;
+  `ethtool` é opcional e fornece detalhes adicionais do driver e firmware
+  quando instalado.
 - Usa o ícone TWC no lançador e na janela do aplicativo.
 
 ## Requisitos
@@ -30,6 +36,7 @@ Linux baseadas em Debian, como Linux Mint e Kali Linux.
 - PolicyKit (`pkexec`) e um agente de autenticação gráfica
 - `iw`, `iproute2`, `aircrack-ng`
 - NetworkManager e `systemctl` para os controles correspondentes
+- `ethtool` (opcional, para detalhes adicionais do driver e firmware)
 
 No Linux Mint, instale os requisitos com:
 
@@ -80,6 +87,9 @@ twc.py`; deixe o PolicyKit cuidar da autenticação e do ambiente gráfico.
 
 1. Abra o TWC e autentique-se na janela do sistema.
 2. Selecione a interface wireless e use **Atualizar** se necessário.
+   Use **Info** para iniciar um log novo com o resumo das capacidades da
+   interface, do driver e do dispositivo conectado. Em dispositivos USB, o
+   nome exibido por `lsusb` é incluído quando esse utilitário está disponível.
 3. Use **Parar NetworkManager** ou **Parar processos Wi-Fi** somente quando
    necessário para a operação desejada.
 4. Selecione **Descer interface**, altere para **Monitor** ou **Managed** e
@@ -120,8 +130,8 @@ escolher o caminho do arquivo:
 ```
 
 O pacote pode então ser instalado com `sudo apt install ./twc.deb`. Para
-preparar uma nova versão, atualize `Version` em `debian/control` e adicione
-uma entrada datada em `debian/changelog` antes de compilar.
+preparar uma nova versão, adicione uma entrada datada em `debian/changelog`;
+o script de compilação lê a versão dessa entrada e a inclui no pacote.
 
 ## Desenvolvimento e contribuição
 
