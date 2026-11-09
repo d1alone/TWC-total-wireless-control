@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+
+# Generated Debian packages and build outputs
+*.deb
+build/
+dist/
+twc_*.deb

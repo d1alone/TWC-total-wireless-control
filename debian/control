@@ -1,0 +1,17 @@
+Source: twc
+Section: net
+Priority: optional
+Maintainer: Benyvan <benyvan@gmail.com>
+Standards-Version: 4.6.2
+Rules-Requires-Root: no
+
+Package: twc
+Architecture: all
+Maintainer: Benyvan <benyvan@gmail.com>
+Depends: python3, python3-tk, iw, iproute2, aircrack-ng, policykit-1, network-manager
+Description: Total Wireless Control graphical Wi-Fi interface manager
+ TWC is a Python/Tkinter desktop application for managing local wireless
+ interfaces, switching monitor and managed modes, and controlling
+ NetworkManager. It requests graphical PolicyKit authentication once at
+ startup, preserves the active desktop display session, then runs the
+ application as root.

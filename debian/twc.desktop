@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=TWC — Total Wireless Control
+GenericName=Wireless interface control
+Comment=Controle gráfico de interfaces wireless
+Exec=/usr/bin/twc
+Icon=twc
+Terminal=false
+Type=Application
+Categories=Network;
+StartupNotify=true

@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Se usar o TWC, cite o projeto conforme os dados abaixo."
+title: "TWC — Total Wireless Control"
+type: software
+authors:
+  - name: "Benyvan (@benyvan)"
+date-released: 2026-11-08
+version: "1.0.0"
+license: GPL-3.0-or-later
+abstract: >-
+  Aplicativo gráfico para controle de interfaces Wi-Fi locais em Linux baseado
+  em Debian.
+keywords:
+  - Linux
+  - Wi-Fi
+  - Tkinter
+  - Debian
+contact:
+  - name: "Benyvan"
+    email: benyvan@gmail.com

@@ -1,0 +1,6 @@
+twc (1.0.0-5) unstable; urgency=medium
+
+  * Prepare the source tree and Debian packaging for public review.
+  * Document usage, security considerations, contribution, and GPL licensing.
+
+ -- Benyvan <benyvan@gmail.com>  Sun, 08 Nov 2026 20:53:00 -0300
